@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+# lscript - script <(Tokyo's)yyyymmddtttt>.log
+
+taihizone=$TZ
+export TZ=Asia/Tokyo
+timestamp=$(date +%Y%m%d%H%M)
+logname="$timestamp.log"
+export TZ=$taihizone
+script -a -f "$logname"
